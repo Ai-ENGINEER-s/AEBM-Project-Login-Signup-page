@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Navbar from './components/Navbar';
+import AuthSection from './components/AuthSection';
+import Footbar  from './components/Footbar';
+import SignupForm from './components/SignupForm';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
+import ControlledCarousel from './components/ControlledCarousel';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+  
+   <Navbar/>
+    <AuthSection/>
+    <ControlledCarousel></ControlledCarousel>
+<SignupForm/>
+<Footbar></Footbar>
   </React.StrictMode>
 );
 

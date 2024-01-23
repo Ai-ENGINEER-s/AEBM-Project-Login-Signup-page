@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+// // App.js
 
-function App() {
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import AuthSection from './components/AuthSection';
+// import InscriptionForm from './components/SignupForm';
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<AuthSection />} />
+//         <Route path="/inscription" element={<InscriptionForm />} />
+//       </Routes>
+//     </Router>
+//   );
+// };
+
+// export default App;
+import React, { useState } from 'react';
+import AuthSection from './components/AuthSection';
+import SignupForm from './components/SignupForm';
+
+const App = () => {
+  const [scrollToSignupForm, setScrollToSignupForm] = useState(false);
+
+  const handleScrollToSignupForm = () => {
+    setScrollToSignupForm(true);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthSection scrollToSignupForm={handleScrollToSignupForm} />
+      <SignupForm scrollToSignupForm={scrollToSignupForm} />
     </div>
   );
 }

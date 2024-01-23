@@ -1,0 +1,35 @@
+/* Navbar.css */
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: #1B4242;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  margin-left: auto;
+  padding-right: 30px; /* Déplace le conteneur de recherche à droite */
+}
+
+.search-input {
+  background-color: #ecf3f3;
+  color: #1B4242;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  width: 190px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 5px rgba(102, 175, 233, 1);
+}

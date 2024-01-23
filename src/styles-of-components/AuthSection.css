@@ -1,0 +1,70 @@
+/* AuthSection styles */
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: #1B4242;
+  padding-bottom: 20px;
+  position: relative; 
+ 
+}
+
+/* Image styles */
+.aebm-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 150px;
+  border-radius: 10px;
+  margin-right: 10px;
+  order: -1;
+  /* Met l'image en haut visuellement, avant les boutons */
+}
+
+/* Button styles */
+/* Button styles */
+.button {
+  border-radius: 10px;
+  width: 130px; /* Ajustez la largeur des boutons selon vos préférences */
+  height: 50px;
+  flex-grow: 1;
+  background-color: beige;
+  color: #1B4242;
+  border: none;
+  padding: 12px; /* Ajustez la taille des boutons selon vos préférences */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  order: 1; /* Met les boutons en bas visuellement, après l'image */
+}
+
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button:hover {
+  background-color: #145151;
+  color: white;
+}
+
+/* Icon styles */
+.icon {
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+
+ /* .auth-section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #1B4242;
+  content: '';
+} */

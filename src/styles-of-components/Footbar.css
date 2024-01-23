@@ -1,0 +1,66 @@
+/* Footer.css */
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    margin-top: 100px;
+    background-color: #1B4242;  /* Même couleur que la navbar */
+    color: #fff;  /* Couleur du texte */
+  }
+  
+  .footer-section {
+    max-width: 300px;
+  }
+  
+  .footer-section h3 {
+    color: #fff;  /* Couleur du titre */
+  }
+  
+  .footer-section p {
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background-color: #fff;  /* Couleur de fond du bouton */
+    color: #1B4242;  /* Couleur du texte du bouton */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #153737;  /* Couleur de fond du bouton au survol */
+  }
+  
+  .newsletter-section {
+    margin-top: 20px;
+  }
+  
+  .newsletter-section h3 {
+    color: #fff;  /* Couleur du titre de la section newsletter */
+  }
+  
+  .newsletter-section button {
+    background-color: #fff;  /* Couleur de fond du bouton de la section newsletter */
+    color: #1B4242;  /* Couleur du texte du bouton de la section newsletter */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .newsletter-section button:hover {
+    background-color: #153737;  /* Couleur de fond du bouton de la section newsletter au survol */
+  }
+  
