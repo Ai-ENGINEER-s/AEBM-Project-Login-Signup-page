@@ -1,0 +1,151 @@
+/* SignupForm.scss */
+
+// Définition des variables pour les points de rupture
+$small-screen: 600px;
+$medium-screen: 900px;
+$large-screen: 1200px;
+
+// Mixin pour les media queries
+@mixin respond-to($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Conteneur principal du formulaire
+.signup-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: beige;
+}
+
+// Section de l'image de signature
+.signup-image-section {
+  flex: 1;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  @include respond-to($medium-screen) {
+    display: none; // Masquer l'image sur les écrans de taille moyenne et inférieure
+  }
+}
+
+// Section du formulaire d'inscription
+.signup-form-section {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+// Formulaire d'inscription
+.signup-form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+
+  @include respond-to($small-screen) {
+    max-width: 90%; // Réduire la largeur du formulaire sur les écrans plus petits
+  }
+}
+
+// Groupe de champs du formulaire
+.signup-form-group {
+  margin-bottom: 20px;
+}
+
+// Étiquette du champ du formulaire
+.signup-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+// Champ du formulaire
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+// Bouton du formulaire
+.signup-button {
+  background-color: #1B4242;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 20px; /* Ajout de la marge en bas pour séparer du bloc suivant */
+
+  &:hover {
+    background-color: #153737;
+  }
+}
+
+// Bouton de connexion avec Google
+.signup-google-button {
+  background-color: #DB4437; // Couleur Google
+}
+
+// Bouton de connexion avec Facebook
+.signup-facebook-button {
+  background-color: #3B5998; // Couleur Facebook
+}
+
+// Barre séparatrice
+.signup-bar-below-header {
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 20px;
+}
+
+// Section des boutons sociaux
+.signup-social-section {
+  text-align: center; /* Centrer les éléments sociaux */
+  margin-top: 20px; /* Ajout de la marge en haut pour séparer du bloc précédent */
+
+  p {
+    font-size: 14px; /* Taille de police ajustée */
+    color: #666; /* Couleur de texte grise pour un look plus subtil */
+    margin-bottom: 10px; /* Espace en bas du paragraphe */
+  }
+
+  .signup-social-buttons {
+    display: flex;
+    flex-direction: column; /* Afficher les boutons verticalement */
+  }
+
+  .signup-social-buttons button {
+    padding: 12px; // Augmenter la taille des boutons
+    border-radius: 8px; // Coins arrondis
+    color: white; // Texte blanc
+    font-size: 16px; // Taille de police
+    font-weight: bold; // Texte en gras
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .signup-social-buttons button:hover {
+    filter: brightness(90%); // Légère variation de luminosité au survol
+  }
+
+  .signup-social-buttons button svg {
+    margin-right: 10px; // Espacement entre l'icône et le texte
+  }
+}

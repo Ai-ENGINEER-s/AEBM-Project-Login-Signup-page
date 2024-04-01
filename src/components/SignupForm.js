@@ -1,7 +1,7 @@
 // SignupForm.js
 
 import React from 'react';
-import '../styles-of-components/SignupForm.css'; // Import your CSS file
+import '../styles-of-components/SignupForm.scss'; // Import your CSS file
 import cartaembm from '../assets/cartaembm.png'; // Import your image
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';

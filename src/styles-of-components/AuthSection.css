@@ -1,13 +1,13 @@
 /* AuthSection styles */
 .auth-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* Affiche les éléments en colonne sur les petits écrans */
+  justify-content: center; /* Centrage vertical */
   align-items: center;
   background-color: #ffffff;
   color: #1B4242;
   padding-bottom: 20px;
-  position: relative; 
- 
+  position: relative;
 }
 
 /* Image styles */
@@ -16,44 +16,55 @@
   max-width: 100%;
   max-height: 150px;
   border-radius: 10px;
-  margin-right: 10px;
-  order: -1;
-  /* Met l'image en haut visuellement, avant les boutons */
+  margin-bottom: 20px; /* Ajoute de l'espace entre l'image et les boutons */
 }
 
-/* Button styles */
+/* Button container */
+.button-container {
+  display: flex;
+  gap: 20px; /* Espacement entre les boutons */
+}
+
 /* Button styles */
 .button {
-  border-radius: 10px;
-  width: 130px; /* Ajustez la largeur des boutons selon vos préférences */
+  border: 2px solid #145151; /* Bordure solide */
+  border-radius: 25px; /* Coins arrondis */
+  min-width: 150px; /* Largeur minimale */
   height: 50px;
-  flex-grow: 1;
-  background-color: beige;
-  color: #1B4242;
-  border: none;
-  padding: 12px; /* Ajustez la taille des boutons selon vos préférences */
+  background-color: transparent; /* Fond transparent */
+  color: #145151; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur */
   cursor: pointer;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 10px;
-  transition: background-color 0.3s, color 0.3s;
-  order: 1; /* Met les boutons en bas visuellement, après l'image */
-}
-
-
-.button:last-child {
-  margin-right: 0;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transition pour l'effet hover */
+  text-transform: uppercase; /* Met en majuscules */
+  font-weight: bold; /* Texte en gras */
 }
 
 .button:hover {
-  background-color: #145151;
-  color: white;
+  background-color: #145151; /* Fond coloré au survol */
+  color: white; /* Texte blanc au survol */
 }
 
 /* Icon styles */
 .icon {
-  margin-left: 5px;
-  font-size: 20px;
+  margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+
+/* Media queries pour rendre la section responsive */
+@media only screen and (min-width: 768px) {
+  .auth-section {
+    flex-direction: row; /* Affiche les éléments en ligne sur les écrans plus larges */
+    align-items: flex-start; /* Alignement en haut */
+  }
+
+  .aebm-image {
+    margin-bottom: 0; /* Supprime l'espace entre l'image et les boutons sur les écrans plus larges */
+    margin-right: 10px; /* Ajoute un espace entre l'image et les boutons */
+  }
 }
 
 
